@@ -1,1 +1,22 @@
+@font-face {
+  font-family: "WitchyFont";
+  src: url("./fonts/October\ Crow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(7, 7, 7);
+}
+
+body {
+  font-family: "WitchyFont", sans-serif;
+  color: white;
+}
