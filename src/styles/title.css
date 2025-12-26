@@ -1,0 +1,25 @@
+.title-container {
+  justify-self: center;
+  text-align: center;
+
+  padding: 3rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0px 0px 30px rgb(185, 3, 155);
+
+  animation: titleSpawn 1.2s ease-out forwards;
+}
+
+@keyframes titleSpawn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    text-shadow: 0 0 0 rgba(185, 3, 155, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 5px rgba(185, 3, 155, 0.8), 0 0 20px rgba(185, 3, 155, 0.6),
+      0 0 40px rgba(185, 3, 155, 0.4);
+  }
+}

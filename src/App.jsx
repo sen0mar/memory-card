@@ -1,8 +1,20 @@
 // import { useState } from "react";
+import Title from "./components/Title.jsx";
+import Difficulty from "./components/Difficulty.jsx";
+import Header from "./components/Header.jsx";
+
 import "./App.css";
 
-function App() {
-  return <></>;
-}
+const App = () => {
+  return (
+    <>
+      <Difficulty />
+      <div className="app">
+        <Header />
+        <Title />
+      </div>
+    </>
+  );
+};
 
 export default App;

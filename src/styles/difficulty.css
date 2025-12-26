@@ -1,0 +1,64 @@
+/* -------------------------------------------------- DIFFICULTY CONTAINER --------------------------------------------------*/
+.difficulty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  width: 100%;
+  max-width: 220px;
+
+  border-radius: 2rem;
+  padding: 3rem;
+
+  font-size: 2rem;
+  background-color: rgba(53, 53, 53, 0.5);
+  box-shadow: 0px 0px 30px rgb(185, 3, 155);
+
+  backdrop-filter: blur(5px);
+}
+
+.difficulty-container .difficulty-selection {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+/* -------------------------------------------------- DIFFICULTY BUTTONS --------------------------------------------------*/
+.difficulty-selection button {
+  padding: 0.6rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.difficulty-selection #easy-btn {
+  background-color: rgb(1, 102, 23);
+}
+
+.difficulty-selection #medium-btn {
+  background-color: rgb(153, 106, 4);
+}
+
+.difficulty-selection #hard-btn {
+  background-color: rgb(255, 0, 0);
+}
+
+.difficulty-selection button:hover {
+  box-shadow: 0px 0px 30px rgb(185, 3, 155);
+}
+/* -------------------------------------------------- DESKTOP LAYOUT --------------------------------------------------*/
+@media (min-width: 1024px) {
+  .difficulty-container {
+    max-width: 500px;
+    top: 50%;
+  }
+}
