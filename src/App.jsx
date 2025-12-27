@@ -2,6 +2,7 @@ import { useState } from "react";
 import Title from "./components/Title.jsx";
 import Difficulty from "./components/Difficulty.jsx";
 import Header from "./components/Header.jsx";
+import Game from "./components/Game.jsx";
 
 import "./App.css";
 
