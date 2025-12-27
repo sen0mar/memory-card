@@ -2,12 +2,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .cards img {
   height: 200px;
   width: auto;
   border-radius: 1rem;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+.cards img:hover {
+  transform: perspective(1000px) scale(1.05);
 }
 
 @media (min-width: 1024px) {

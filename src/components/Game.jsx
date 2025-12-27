@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Cards from "./Cards.jsx";
+import "../styles/game.css";
 
 const Game = ({ difficulty, onChangeDifficulty }) => {
   const [score, setScore] = useState(0);
