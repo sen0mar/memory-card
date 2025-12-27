@@ -1,7 +1,7 @@
 import helpIcon from "../icons/help.svg";
 import "../styles/header.css";
 
-const Header = () => {
+const Header = ({ changeDifficulty }) => {
   return (
     <div className="header-container">
       <img
@@ -11,7 +11,7 @@ const Header = () => {
         tabIndex={0}
         aria-label="game instructions"
       />
-      <button>Change Difficulty</button>
+      <button onClick={changeDifficulty}>Change Difficulty</button>
     </div>
   );
 };

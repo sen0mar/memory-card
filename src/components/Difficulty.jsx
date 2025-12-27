@@ -1,8 +1,8 @@
 import "../styles/difficulty.css";
 
-const Difficulty = ({ onStart, difficulty }) => {
+const Difficulty = ({ onStart, difficulty, removeDifficulty }) => {
   return (
-    <div className="difficulty-container">
+    <div className={`difficulty-container ${removeDifficulty ? "remove" : ""}`}>
       <h2>Welcome to the Witch's Path</h2>
       <p></p>
       <p>Select difficulty:</p>
