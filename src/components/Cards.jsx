@@ -12,22 +12,39 @@ function shuffle(array) {
   return arr;
 }
 
-const Cards = () => {
+const Cards = ({ onCardClick }) => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
+    shuffleCards();
+  }, []);
+
+  const shuffleCards = () => {
     const selected = shuffle(imagesData).slice(0, 9);
     const processedImages = selected.map((img) => ({
       ...img,
       src: `/images/${img.src}`,
     }));
     setImages(processedImages);
-  }, []);
+  };
+
+  const handleCardClick = (cardId) => {
+    // Call parent click handler first
+    onCardClick(cardId);
+
+    // Then reshuffle the entire deck
+    shuffleCards();
+  };
 
   return (
     <div className="cards">
       {images.map((img) => (
-        <img key={img.id} src={img.src} alt={img.name} />
+        <img
+          key={img.id}
+          src={img.src}
+          alt={img.name}
+          onClick={() => handleCardClick(img.id)}
+        />
       ))}
     </div>
   );
