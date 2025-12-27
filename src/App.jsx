@@ -2,8 +2,7 @@ import { useState } from "react";
 import Title from "./components/Title.jsx";
 import Difficulty from "./components/Difficulty.jsx";
 import Header from "./components/Header.jsx";
-import Game from "./components/Game.jsx";
-
+import Cards from "./components/Cards.jsx";
 import "./App.css";
 
 const App = () => {
@@ -23,7 +22,12 @@ const App = () => {
       />
       <div className={`app ${difficulty !== null ? "" : "blur"}`}>
         <Header changeDifficulty={() => setDifficulty(null)} />
-        {hasStarted && <Title />}
+        {hasStarted && (
+          <>
+            <Title />
+            <Cards />
+          </>
+        )}
       </div>
     </>
   );

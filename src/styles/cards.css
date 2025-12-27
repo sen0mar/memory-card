@@ -1,0 +1,22 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cards img {
+  height: 200px;
+  width: auto;
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cards img {
+    height: 280px;
+    width: auto;
+    border-radius: 1rem;
+  }
+}
